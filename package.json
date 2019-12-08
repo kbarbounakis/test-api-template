@@ -1,0 +1,62 @@
+{
+  "name": "x62vn",
+  "version": "1.0.0",
+  "description": "MOST Web Framework test api server",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js localhost 8080",
+    "test": "jasmine"
+  },
+  "dependencies": {
+    "@themost/common": "^2.3.2",
+    "@themost/data": "^2.4.9",
+    "@themost/express": "^1.3.9",
+    "@themost/query": "^2.3.4",
+    "@themost/sqlite": "^2.2.1",
+    "@themost/test": "next",
+    "@themost/web": "^2.4.6",
+    "@themost/xml": "^2.3.2",
+    "node-fetch": "2.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-transform-async-to-generator": "^7.1.0",
+    "@babel/plugin-transform-strict-mode": "^7.0.0",
+    "@babel/plugin-transform-typeof-symbol": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.1.2",
+    "nodemon": "1.18.4",
+    "jasmine": "^3.5.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "@types/jasmine": "3.5.0",
+    "babel-eslint": "10.0.3"
+  },
+  "keywords": [
+    "api",
+    "orm",
+    "odata",
+    "test"
+  ],
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "verbose": true,
+    "legacy-watch": true,
+    "execMap": {
+      "js": "node --require @babel/register"
+    },
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 8080,
+      "IP": "localhost"
+    },
+    "ext": "js,json"
+  }
+}
